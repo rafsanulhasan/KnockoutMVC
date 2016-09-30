@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "jquery": "~3.1.1",
+    "jquery-validation": "~1.14.0",
+    "jquery-validation-unobtrusive": "~3.2.6"
+  },
+  "devDependencies": {
+    "jquery": "~2.2.4",
+    "jquery-form": "~3.46.0",
+    "json": "*", 
+    "knockout": "~3.4.0",
+    "knockout-mapping": "~2.4.1"
+  },
+  "name": "KnockoutMVC",
+  "private": false,
+  "resolutions": {
+    "jquery": ">=2.2.0",
+    "knockout": ">=3.4.0",
+    "knockout-mapping": ">=2.4.0" 
+  }
+}

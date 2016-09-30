@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "grunt": "^1.0.1",
+    "gulp": "^3.9.1",
+    "knockout": "^3.4.0",
+    "knockout-mapping": "^2.6.0"
+  },
+  "name": "asp.net",
+  "private": true,
+  "version": "1.0.0"
+}

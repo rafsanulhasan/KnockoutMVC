@@ -1,10 +1,9 @@
-﻿using System;
-using System.Linq.Expressions;
-
-namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
+﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
 {
-
+#if netcoreapp16
+	using System;
 	using System.Diagnostics.CodeAnalysis;
+	using System.Linq.Expressions;
 
 	using Microsoft.AspNetCore.Html;
 
@@ -31,5 +30,5 @@ namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
 			return $"{Name} : {value ?? "$data"}";
 		}
 	}
-
+#endif
 }

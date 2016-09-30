@@ -1,6 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Utilities
 {
-
+#if netcoreapp16
 	using ViewFeatures;
 
 	public static class KnockoutExtensions
@@ -19,5 +19,5 @@
 			return context;
 		}
 	}
-
+#endif
 }

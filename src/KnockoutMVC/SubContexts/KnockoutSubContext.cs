@@ -1,7 +1,6 @@
-﻿
-
-namespace Microsoft.AspNetCore.Mvc.Knockout
+﻿namespace Microsoft.AspNetCore.Mvc.Knockout
 {
+#if netcoreapp16
 	using System.Collections.Generic;
 
 	using System.Diagnostics.CodeAnalysis;
@@ -31,4 +30,5 @@ namespace Microsoft.AspNetCore.Mvc.Knockout
             return data.Clone();
         }
     }
+#endif
 }

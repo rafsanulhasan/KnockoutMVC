@@ -1,8 +1,6 @@
-﻿
-
-namespace Microsoft.AspNetCore.Html
+﻿namespace Microsoft.AspNetCore.Html
 {
-
+#if netcoreapp16
 	using Mvc.Knockout;
 	using Mvc.Knockout.Utilities;
 	using Mvc.Rendering;
@@ -17,16 +15,16 @@ namespace Microsoft.AspNetCore.Html
 	[SuppressMessage("ReSharper", "ArrangeThisQualifier")]
 	public class KnockoutHtml <TModel> : KnockoutSubContext<TModel>
 	{
-		#region Private Members
+#region Private Members
 
-		#region Fields
+#region Fields
 
 		readonly ViewContext _viewContext;
 		KnockoutContext<TModel> _knockoutContext;
 
-		#endregion
+#endregion
 
-		#endregion
+#endregion
 
 		public KnockoutHtml(
 			ViewContext viewContext,
@@ -250,5 +248,5 @@ namespace Microsoft.AspNetCore.Html
 			return formContext;
 		}
 	}
-
+#endif
 }

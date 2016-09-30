@@ -1,7 +1,6 @@
-﻿
-
-namespace Microsoft.AspNetCore.Html
+﻿namespace Microsoft.AspNetCore.Html
 {
+#if netcoreapp16
 	using KnockoutMVC.Extensions;
 	using Mvc.Knockout;
 	using Mvc.Rendering;
@@ -57,5 +56,5 @@ namespace Microsoft.AspNetCore.Html
 			writer.WriteLine(new HtmlString(tagBuilder.ToString(TagRenderMode.EndTag)));
 		}
 	}
-
+#endif
 }

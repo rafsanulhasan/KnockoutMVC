@@ -1,5 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout
 {
+#if netcoreapp16
 	using Binding;
 	using Html;
 	using Mvc;
@@ -22,9 +23,9 @@
 	[SuppressMessage("ReSharper", "ArrangeThisQualifier")]
 	public class KnockoutContext <TModel> : IKnockoutContext
 	{
-		#region Private Members
+#region Private Members
 
-		#region Fields
+#region Fields
 
 		TModel _model;
 
@@ -32,9 +33,9 @@
 
 		readonly ViewContext _viewContext;
 
-		#endregion
+#endregion
 
-		#region Methods
+#region Methods
 
 		string GetInitializeData(TModel model, bool needBinding, string wrapperId, bool applyOnDocumentReady)
 		{
@@ -89,27 +90,27 @@
 			return builder.ToString();
 		}
 
-		#endregion
+#endregion
 
-		#endregion
+#endregion
 
-		#region Public Members
+#region Public Members
 
-		#region Properties
+#region Properties
 
 		// ReSharper disable once ConvertToAutoPropertyWithPrivateSetter
 		public TModel Model => _model;
 		public string ViewModelName = "viewModel";
 
-		#endregion
+#endregion
 
-		#region Constructors
+#region Constructors
 
 		public KnockoutContext(ViewContext viewContext) { _viewContext = viewContext; }
 
-		#endregion
+#endregion
 
-		#region Methods
+#region Methods
 
 		public HtmlString Initialize(TModel model)
 		{
@@ -257,16 +258,16 @@
 			(new ActionContext
 				 (_viewContext.HttpContext, _viewContext.RouteData, _viewContext.ActionDescriptor, _viewContext.ModelState));
 
-		#endregion
+#endregion
 
-		#endregion
+#endregion
 
-		#region Protected Members
-		#region Properties
+#region Protected Members
+#region Properties
 		protected List<IKnockoutContext> ContextStack { get; set; } = new List<IKnockoutContext>();
 
-		#endregion
-		#endregion
+#endregion
+#endregion
 	}
-
+#endif
 }

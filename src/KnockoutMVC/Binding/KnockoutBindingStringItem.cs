@@ -1,7 +1,6 @@
-﻿
-
-namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
+﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
 {
+#if netcoreapp16
 	using System;
 	using System.Diagnostics.CodeAnalysis;
 	using System.Text;
@@ -47,4 +46,5 @@ namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
             return builder.ToString();
         }
 	}
+#endif
 }

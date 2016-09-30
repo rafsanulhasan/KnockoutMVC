@@ -1,25 +1,26 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout
 {
-
+#if netcoreapp16
 	using Rendering;
 
 	public class KnockoutIfContext<TModel> : KnockoutCommonRegionContext<TModel>
 	{
-		#region Public Members
-		#region Constructors
+#region Public Members
+#region Constructors
 		public KnockoutIfContext(ViewContext viewContext, string expression)
             : base(viewContext, expression)
         {
         }
 
-		#endregion
-		#endregion
+#endregion
+#endregion
 
-		#region Protected Members
-		#region Properties
+#region Protected Members
+#region Properties
 		protected override string Keyword => "if";
 
-		#endregion
-		#endregion
+#endregion
+#endregion
 	}
+#endif
 }

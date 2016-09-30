@@ -1,6 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Binding
 {
-
+#if netcoreapp16
 	using Html;
 	using System;
 	using System.Collections;
@@ -251,5 +251,5 @@
 
 		void IHtmlContent.WriteTo(TextWriter writer, HtmlEncoder encoder) { throw new NotImplementedException(); }
 	}
-
+#endif
 }

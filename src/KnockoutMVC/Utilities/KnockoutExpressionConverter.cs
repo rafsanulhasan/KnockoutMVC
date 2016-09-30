@@ -1,8 +1,6 @@
-﻿
-
-namespace Microsoft.AspNetCore.Mvc.Knockout.Utilities
+﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Utilities
 {
-
+#if netcoreapp16
 	using System;
 	using System.Collections.Generic;
 	using System.Collections.ObjectModel;
@@ -286,5 +284,5 @@ namespace Microsoft.AspNetCore.Mvc.Knockout.Utilities
 
 		protected virtual string VisitInvocation(InvocationExpression iv) { throw new NotSupportedException(); }
 	}
-
+#endif
 }

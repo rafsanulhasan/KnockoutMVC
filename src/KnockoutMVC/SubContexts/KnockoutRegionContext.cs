@@ -1,6 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout
 {
-
+#if netcoreapp16
 	using Rendering;
 	using System;
 	using System.Diagnostics.CodeAnalysis;
@@ -9,7 +9,7 @@
 	[SuppressMessage("ReSharper", "ArrangeThisQualifier")]
 	public abstract class KnockoutRegionContext <TModel> : KnockoutContext<TModel>, IDisposable
 	{
-		#region Protected Constructors
+#region Protected Constructors
 
 		protected KnockoutRegionContext(ViewContext viewContext)
 			: base(viewContext)
@@ -21,22 +21,22 @@
 			InStack = true;
 		}
 
-		#endregion
+#endregion
 
-		#region Public Properties
+#region Public Properties
 
 		public bool InStack { get; set; }
 
-		#endregion
+#endregion
 
-		#region Private Fields
+#region Private Fields
 
 		bool _disposed;
 		readonly TextWriter _writer;
 
-		#endregion
+#endregion
 
-		#region Public Methods
+#region Public Methods
 
 		public void Dispose()
 		{
@@ -44,9 +44,9 @@
 			GC.SuppressFinalize(this);
 		}
 
-		#endregion
+#endregion
 
-		#region Protected Methods
+#region Protected Methods
 
 		protected void Dispose(bool disposing)
 		{
@@ -60,14 +60,14 @@
 				ContextStack.RemoveAt(ContextStack.Count - 1);
 		}
 
-		#endregion
+#endregion
 
-		#region Abstract Methods
+#region Abstract Methods
 
 		public abstract void WriteStart(TextWriter writer);
 		protected abstract void WriteEnd(TextWriter writer);
 
-		#endregion
+#endregion
 	}
-
+#endif
 }

@@ -1,5 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Html
 {
+#if netcoreapp16
 	using Mvc.Knockout;
 	using Mvc.Knockout.Binding;
 	using Mvc.Rendering;
@@ -75,5 +76,5 @@
 			return _tagBuilder.ToString();
 		}
 	}
-
+#endif
 }

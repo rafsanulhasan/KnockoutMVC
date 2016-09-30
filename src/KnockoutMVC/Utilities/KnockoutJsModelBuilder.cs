@@ -1,5 +1,6 @@
 ﻿namespace Microsoft.AspNetCore.Mvc.Knockout.Utilities
 {
+#if netcoreapp16
 	using DelegateDecompiler;
 	using System;
 	using System.Collections;
@@ -115,5 +116,5 @@
 			return KnockoutExpressionConverter.Convert(expression, data);
 		}
 	}
-
+#endif
 }
